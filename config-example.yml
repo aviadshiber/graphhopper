@@ -8,7 +8,7 @@ graphhopper:
 
   # Possible options: car,foot,bike,bike2,mtb,racingbike,motorcycle (comma separated)
   # bike2 takes elevation data into account (like up-hill is slower than down-hill) and requires enabling graph.elevation.provider below
-  graph.flag_encoders: car
+  graph.flag_encoders: foot
 
 
   # Enable turn restrictions for car or motorcycle.
@@ -73,10 +73,12 @@ graphhopper:
   # routing.max_visited_nodes: 1000000
 
 
-  # If enabled, allows a user to run flexibility requests even if speed mode is enabled. Every request then has to include a hint routing.ch.disable=true.
+   #If enabled, allows a user to run flexibility requests even if speed mode is enabled. Every request then has to include a hint 
+   
+  #routing.ch.disable=true
   # Attention, non-CH route calculations take way more time and resources, compared to CH routing.
   # A possible attacker might exploit this to slow down your service. Only enable it if you need it and with routing.maxVisitedNodes
-  # routing.ch.disabling_allowed: true
+  routing.ch.disabling_allowed: true
 
 
   # If enabled, allows a user to run flexible mode requests even if the hybrid mode is enabled. Every such request then has to include a hint routing.lm.disable=true.
